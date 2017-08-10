@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>个人简历</title>
+  <link rel="stylesheet" type="text/css" href="css.css">
+</head>
+<body>
+	<div id="main">
+		<div id="header"><h1>个人简历</h1></div>
+		<div id="content">
+			<div id="left">
+  			<div id="box">
+  			  <div id="img"><img src="images/touxiang.jpg" alt="zhaopian"></div>
+  			  <div id="txt">你站的高度，<br>决定你看的宽度！</div>
+  			</div>
+  			<div id="jieshao">
+  				<p><img src="images/lianxiren.png" alt="xm">：曹晓川</p>
+  				<p><img src="images/sex.png" alt="se">：男</p>
+  				<p><img src="images/shengri.png" alt="m">：1998.01.26</p>
+  				<p><img src="images/home.png" alt="d">：河北邯郸</p>
+  				<p><img src="images/school.png" alt="s">：河北软件学院</p>
+  			</div>
+			</div>
+			<div id="right">
+				<ul id='caozuo'>
+					<li id="f" class="active">教育背景</li>
+					<li id="s">专业技能</li>
+					<li id="t">作品展示</li>
+					<li id="l">联系方式</li>
+				</ul>
+				<section id="ff" class="show">
+          <p id="f1"><span>入学时间：2015.09—2018.06 </span><br><span>所在学校：河北软件职业技术学院</span><br><span>所学专业：计算机信息管理(网页制作方向)</span></p>
+					<p id="f2">主修课程：<br>
+					基础平面设计、职业素质教育、计算机基础教程、WEB界面特效<br>MySQL数据库、面对对象程序设计、CMS快速建站(phpcms) <br>
+					开源框架技术(bootstrap)</p>
+				</section>
+				<section id="ss">
+					<div>
+						<em>HTML：</em><p><span id="s1">90%</span></p>
+					</div>
+					<div>
+						<em>CSS：</em><p><span id="s2">85%</span></p>
+					</div>
+					<div>
+						<em>JS：</em><p><span id="s3">75%</span></p>
+					</div>
+					<div>
+						<em>jQuery：</em><p><span id="s4">80%</span></p>
+					</div>
+					<div>
+						<em>CSS3：</em><p><span id="s5">75%</span></p>
+					</div>
+					<div>
+						<em>Bootstrap：</em><p><span id="s6">70%</span></p>
+					</div>
+					<div>
+						<em>PS：</em><p><span id="s7">70%</span></p>
+					</div>
+				</section>
+        <section id="tt">
+          <div id="t1"><a href="https://xiaochuan6.github.io/aotuosb/"><img src="images/lianjie1.png">水泵网</a></div><div id="t2"><a href="https://xiaochuan6.github.io/Tourism"><img src="images/lianjie2.jpg">旅游网</a></div><div id="t3"><a href="https://xiaochuan6.github.io/exam/"><img src="images/lianjie3.png">Bootstrap单网页</a></div><div id="t4"><a href="#"><img src="images/lianjie1.png">绿化网(CMS)</a></div>
+        </section>
+				<section id="ll">
+          <div id="lxfs">
+            <p><img src="images/photo.png" alt="xm">：18713266977</p><br><p><img src="images/qq.png" alt="xm">：254048085</p><br><p><img src="images/weixin.png" alt="xm">：Mrxiao_chuan</p><br><p><img src="images/github (2).png" alt="xm">：github.com/xiaochuan6</p>
+          </div> 
+          <div id="zwpj">
+            <h3><span>自我评价</span></h3> <p id="nr">本人有较强的社会责任感，对工作及学习具有强烈的积极性，列如：(专业老师布置的作业都是最先完成的)，接受新鲜事物能力强，热爱前端技术、喜欢制作网页，专业知识掌握不错，性格外向能尽快的融入一个集体中。</p>
+          </div>
+        </section>
+			</div>
+		</div>
+	</div>
+  <script>
+    var caozuo=document.getElementById('caozuo');
+    var li=caozuo.getElementsByTagName('li');
+    var right=document.getElementById('right');
+    var ss=document.getElementById('ss');
+    var sec=right.getElementsByTagName('section');
+    var p=ss.getElementsByTagName('p');
+    for(var i=0;i<li.length;i++){
+      li[i].index=i;
+      li[i].onclick=function (){
+        for(var i=0;i<li.length;i++){
+          li[i].className='';
+          sec[i].className='';
+        }
+        this.className='active';
+        sec[this.index].className='show';
+      }
+    }
+  </script>
+</body>
+</html>
